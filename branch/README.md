@@ -31,6 +31,7 @@
 > >
 > > ```
 > > # git merge <mergered branch>
+> > # git merge --abort //되돌리기
 > > ```
 > >
 > > ## rebase
@@ -42,6 +43,7 @@
 > >
 > > ```
 > > # git rebase <maintaining branch>
+> > # git rebase --continue //충돌 해결 후 재진행
 > > ```
 > >
 > > ## \*커밋 병합 rebase
