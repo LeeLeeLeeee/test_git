@@ -45,3 +45,26 @@ git checkout -- <filename> file을 되돌린다 <strong style='color:red'>주의
 # git rebase <maintaining branch>
 # git rebase --continue //충돌 해결 후 재진행
 ```
+
+## cherry-pick
+
+- 체리픽 커밋은 다른 브랜치를 내가 작업한 브랜치로 합치는 커밋.
+- 해당 브랜치의 특정 커밋 시점을 지정할 수 있음. (커밋 ID 앞 8자리)
+
+```
+테스트 과정
+cherry-pick 브랜치 생성 후 아래 작업 실행
+1. file.txt 생성
+2. txt 내부에 cherry-pick1 하고  add . 후  commit "1" ID => 12345678
+3. txt 내부에 cherry-pick2 하고  add . 후  commit "2" ID => 12345679
+4. txt 내부에 cherry-pick3 하고  add . 후  commit "3" ID => 12345680
+5. txt 내부에 cherry-pick-error 하고  add . 후  commit "error" ID => 12345681
+
+# cherry-pick으로 commit "3" 시점으로 돌아가려고 할 때.
+
+1. 헤드를 다시 cherry-pick 브랜치 시작했던 지점으로 checkout
+2. cherry-pick-correct 브랜치 생성 후 체크아웃 [git checkout -b "cherry-pick-correct"]
+3. git cherry-pick 12345680 실행
+4. cherry-pick 브랜치 변경 사항 적용할 경우 => (git add. => git commit -m "커밋문구") 완료
+4. cherry-pick 브랜치 변경 사항 적용하지 않을 경우 => (git rm .)
+```
