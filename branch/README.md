@@ -65,6 +65,5 @@ cherry-pick 브랜치 생성 후 아래 작업 실행
 1. 헤드를 다시 cherry-pick 브랜치 시작했던 지점으로 checkout
 2. cherry-pick-correct 브랜치 생성 후 체크아웃 [git checkout -b "cherry-pick-correct"]
 3. git cherry-pick 12345680 실행
-4. cherry-pick 브랜치 변경 사항 적용할 경우 => (git add. => git commit -m "커밋문구") 완료
-4. cherry-pick 브랜치 변경 사항 적용하지 않을 경우 => (git rm .)
+4. cherry-pick 충돌 해결 후 => (git add. => git commit -m "커밋문구") 완료
 ```
